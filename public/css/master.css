@@ -229,7 +229,7 @@ ol#lista-users {
   color: white;
   margin: 1rem;
   box-sizing: border-box;
-  border-radius: 20px;
+  border-radius: 0;
   width: 60%;
   margin-bottom: 0;
   height: 75px;
@@ -312,5 +312,3 @@ ol#lista-users {
   transform: var(--transform);
   transition:var(--transition);
 }
-
-

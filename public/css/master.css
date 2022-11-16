@@ -1,0 +1,316 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+}
+
+body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+
+/*CSS index*/
+
+.main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #000;
+  color: #fff;
+}
+
+.login-container {
+  height: 50vh;
+  width: 50%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.input-login {
+  width: 60%;
+  background: #000;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border: 1px solid #808080;
+  border-radius: 0px;
+  color: #fff;
+  transition: background-color .3s;
+}
+.input-login::-webkit-input-placeholder {
+  color: white;
+}
+
+button.login-button {
+  color: #fff;
+  background: #000;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 60%;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+.login-button:hover{
+  color: #000;
+  background-color: #fff;
+}
+
+
+/*CSS chat*/
+
+.main-container_b {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display:grid;
+  justify-content:flex-end;
+  align-items:flex-end;
+  background-color: #fff;;
+  color: #fff;
+  box-sizing: border-box;
+}
+.user-list {
+  box-sizing: border-box;
+  width: 30%;
+  background-color: #3C3F44;
+  border: 0px solid rgb(189, 189, 189);
+  border-radius: 0px;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: scroll;
+  padding: 0rem;
+  position: fixed;
+  color: #fff;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+  color: white;
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.loader button {
+  padding: 1rem;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 0px;
+  font-size: 1rem;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.text-container {
+  width:70%;
+  box-sizing: border-box;
+  margin-right: 1rem;
+  background-color: #131313;
+  border: 0px solid rgb(189, 189, 189);
+  border-radius: 0px;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 460px;
+}
+
+.input-chat {
+  background-color: #000;
+  color: #F5F5F5;
+  align-self: flex-end;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+}
+
+#input {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border: 0px solid #000;
+  font-size: 1rem;
+}
+
+hr.divider {
+  padding: 0;
+  margin: 1rem 0 1rem;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+ol#lista-users {
+  margin-left: 1rem;
+}
+
+.mensajes-container {
+  width: 100%;
+  display: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.local-message {
+  text-align: right;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  margin: 1rem;
+  box-sizing: border-box;
+  border-radius: 0px;
+  width: 60%;
+  margin-left: auto;
+  margin-bottom: 0;
+  height: 75px;
+}
+
+.remote-message {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  margin: 1rem;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 60%;
+  margin-bottom: 0;
+  height: 75px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.globalchat{
+  height: 50px;
+  width: 100px;
+  position: fixed;
+  box-sizing: border-box;
+  margin-right: 1rem;
+  background-color: #131313;
+  border: 0px solid rgb(189, 189, 189);
+  border-radius: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.globalc{
+  background-color: none;
+  box-sizing: border-box;
+  width: 30%;
+  background-color:none;
+  border: 0px solid none;
+  border-radius: 0px;
+  height: 30vh;
+  max-height: 300vh;
+  overflow: hidden;
+  padding: 1rem;
+  position: fixed;
+  color: #fff;
+}
+
+.infront{
+  background-color: #000;
+}
+
+/*------------------------------------------------------------Text container------------------------------------------------------*/
+
+/*------------------------------------------------------------Modal------------------------------------------------------*/
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s .9s;
+  --transform: translateY(-100vh);
+  --transition: transform .8s;
+}
+
+.modal--show{
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity .6s;
+  --transform: translateY(0);
+  --transition: transform .8s .8s;
+}
+
+.modal__container{
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition:var(--transition);
+}
+
+

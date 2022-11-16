@@ -1,4 +1,5 @@
-var socket = io.connect('http://localhost:8080/');
+var host = window.location.hostname == 'localhost' ? 'http://localhost:8080' : 'https://chat-production-020e.up.railway.app';
+var socket = io.connect(host);
 var list = document.querySelector('#lista-users');
 var username = window.location.pathname.replace('/chat/', '');
 var clientes = [];
